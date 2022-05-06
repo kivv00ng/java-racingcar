@@ -8,7 +8,6 @@ import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class NameTest {
-
     @Test
     void create() {
         Name name = Name.of("pobi");
