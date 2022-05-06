@@ -10,7 +10,6 @@ import static java.lang.System.setIn;
 import static org.assertj.core.api.Assertions.*;
 
 public class InputViewTest {
-
     @Test
     void 입력테스트() {
         String userInput = String.format("pobi,crong,honux%s5", lineSeparator());

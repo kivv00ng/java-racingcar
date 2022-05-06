@@ -1,9 +1,10 @@
 package racingCar.domain;
 
-public class NumberOfGame {
+public final class NumberOfGame {
     public static final int GAME_OVER_NUMBER = 0;
+    public static final int DECREASE_UNIT = 1;
 
-    private int numberOfGame;
+    private final int numberOfGame;
 
     public NumberOfGame(int numberOfGame) {
         this.numberOfGame = numberOfGame;
@@ -13,8 +14,8 @@ public class NumberOfGame {
         return this.numberOfGame == GAME_OVER_NUMBER;
     }
 
-    public void decreaseNumberOfGame() {
-        numberOfGame--;
+    public NumberOfGame decreaseNumberOfGame() {
+        return new NumberOfGame(numberOfGame - DECREASE_UNIT);
     }
 
     public boolean checkNumberOfGame(int numberOfGame) {

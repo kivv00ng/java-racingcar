@@ -19,12 +19,12 @@ public class Car {
     }
 
     public Car(String name) {
-        this.name = new Name(name);
+        this.name = Name.of(name);
         this.position = new Position();
     }
 
     public Car(String name, int position) {
-        this.name = new Name(name);
+        this.name = Name.of(name);
         this.position = new Position(position);
     }
 

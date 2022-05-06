@@ -16,9 +16,8 @@ public class NumberOfGameTest {
     void 진행횟수확인() {
         NumberOfGame numberOfGame = new NumberOfGame(5);
         for (int i = 0; i < 5; i++) {
-            numberOfGame.decreaseNumberOfGame();
+            numberOfGame = numberOfGame.decreaseNumberOfGame();
         }
         assertThat(numberOfGame.isEndGame()).isTrue();
-
     }
 }

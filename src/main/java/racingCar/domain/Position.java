@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Position {
     public static final int INITIAL_VALUE = 1;
     public static final int POSITION_MINIMUM = 0;
+    public static final int INCREASE_UNIT = 1;
 
     private final int position;
 
@@ -28,7 +29,7 @@ public class Position {
     }
 
     public Position increase() {
-        return new Position(position + 1);
+        return new Position(position + INCREASE_UNIT);
     }
 
     public Position maxPosition(Position maxPosition) {

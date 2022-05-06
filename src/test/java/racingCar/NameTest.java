@@ -11,21 +11,21 @@ public class NameTest {
 
     @Test
     void create() {
-        Name name = new Name("pobi");
+        Name name = Name.of("pobi");
         assertThat(name.toString()).isEqualTo("pobi");
     }
-    
+
     @Test
     void 이름공백예외처리() {
         assertThatThrownBy(() -> {
-            Name name = new Name("");
+            Name name = Name.of("");
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
     void 이름글자수예외처리() {
         assertThatThrownBy(() -> {
-            Name name = new Name("123456");
+            Name name = Name.of("123456");
         }).isInstanceOf(IllegalArgumentException.class);
     }
 }

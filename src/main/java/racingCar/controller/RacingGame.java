@@ -16,7 +16,7 @@ public class RacingGame {
         System.out.println("\n실행 결과");
         while (!numberOfGame.isEndGame()) {
             ResultView.resultOfCars(cars, carOfNumber);
-            numberOfGame.decreaseNumberOfGame();
+            numberOfGame = numberOfGame.decreaseNumberOfGame();
         }
         ResultView.resultOfWinners(cars);
     }

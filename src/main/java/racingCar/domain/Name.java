@@ -2,12 +2,12 @@ package racingCar.domain;
 
 import java.util.Objects;
 
-public class Name {
+public final class Name {
     public static final int NAME_LENGTH_MAX = 5;
 
     private final String name;
 
-    public Name(String name) {
+    private Name(String name) {
         if (name.isBlank()) {
             throw new IllegalArgumentException("이름을 반드시 입력하세요.");
         }
@@ -16,6 +16,11 @@ public class Name {
         }
         this.name = name;
     }
+
+    public static Name of(String name) {
+        return new Name(name);
+    }
+
 
     @Override
     public String toString() {
