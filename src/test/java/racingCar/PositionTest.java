@@ -7,7 +7,6 @@ import racingCar.domain.Position;
 import static org.assertj.core.api.Assertions.*;
 
 public class PositionTest {
-
     @Test
     void 이동거리만들기() {
         Position position = new Position(3);
@@ -27,6 +26,6 @@ public class PositionTest {
 
     @Test
     void 큰값비교하기() {
-        assertThat(new Position(4).isBigCurrentPosition(new Position(3))).isTrue();
+        assertThat(new Position(4).maxPosition(new Position(3))).isEqualTo(new Position(4));
     }
 }

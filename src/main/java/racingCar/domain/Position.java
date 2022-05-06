@@ -6,7 +6,7 @@ public class Position {
     public static final int INITIAL_VALUE = 1;
     public static final int POSITION_MINIMUM = 0;
 
-    private int position;
+    private final int position;
 
     public Position() {
         this.position = INITIAL_VALUE;
@@ -28,17 +28,16 @@ public class Position {
     }
 
     public Position increase() {
-        position++;
-        return this;
+        return new Position(position + 1);
     }
 
     public Position maxPosition(Position maxPosition) {
-        if ((maxPosition.position <= this.position)) {
+        if (maxPosition.position <= this.position) {
             return this;
         }
         return maxPosition;
     }
-    
+
 
     @Override
     public boolean equals(Object o) {
